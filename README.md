@@ -18,7 +18,7 @@ engenos start
 
 **npm**
 ```sh
-npm i -g @engen-ai/engenos
+npm i -g @engenai/engenos
 engenos install
 ```
 
@@ -38,7 +38,7 @@ Cortex; container images are pulled only when their pinned digest changes).
 
 ```sh
 brew update && brew upgrade engenos     # Homebrew
-npm update -g @engen-ai/engenos         # npm
+npm update -g @engenai/engenos         # npm
 engenos upgrade                         # direct (any install method)
 ```
 
