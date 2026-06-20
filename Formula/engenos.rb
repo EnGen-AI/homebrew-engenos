@@ -1,9 +1,9 @@
 class Engenos < Formula
   desc "EnGen OS — EnGenAI local-deployment app (console + Cortex + autonomy runtime)"
   homepage "https://github.com/EnGen-AI/engenos"
-  url "https://github.com/EnGen-AI/homebrew-engenos/releases/download/v0.1.149/engenos-0.1.149.tar.gz"
-  sha256 "7ee2445637482d17a38787296b58b6867b270d4526c6c197c0a723d6592d8dcd"
-  version "0.1.149"
+  url "https://github.com/EnGen-AI/homebrew-engenos/releases/download/v0.1.150/engenos-0.1.150.tar.gz"
+  sha256 "7e88dbabd8f0e2a462179a6a444401d8f38bc26bc26704d2ee008bf232fd37c2"
+  version "0.1.150"
 
   depends_on "python@3.12"
 
@@ -33,6 +33,6 @@ class Engenos < Formula
   end
 
   test do
-    assert_match "0.1.149", shell_output("#{bin}/engenos version")
+    assert_match "0.1.150", shell_output("#{bin}/engenos version")
   end
 end
