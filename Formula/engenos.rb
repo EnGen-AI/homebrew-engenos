@@ -8,10 +8,12 @@ class Engenos < Formula
   depends_on "python@3.12"
 
   def install
+    # Homebrew strips the tarball's single top-level dir (engenos/) on stage, so the product
+    # tree lands directly under libexec (libexec/local-cortex/..., NOT libexec/engenos/...).
     libexec.install Dir["*"]
     (bin/"engenos").write <<~SH
       #!/bin/bash
-      exec "#{libexec}/engenos/local-cortex/console/scripts/engenos" "$@"
+      exec "#{libexec}/local-cortex/console/scripts/engenos" "$@"
     SH
     chmod 0755, bin/"engenos"
   end
